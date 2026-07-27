@@ -692,7 +692,7 @@ from routes.history.history_routes import setup_history_routes
 app.include_router(setup_history_routes(session_manager, upload_handler=upload_handler))
 
 # Search
-from routes.search_routes import setup_search_routes
+from routes.search.search_routes import setup_search_routes
 app.include_router(setup_search_routes(config))
 
 # Presets
@@ -820,7 +820,7 @@ set_ai_rag_manager(rag_manager, personal_docs_mgr)
 logger.info("AI interaction tools initialized (session, memory, RAG, UI control)")
 
 # Webhooks
-from routes.webhook_routes import setup_webhook_routes
+from routes.webhook.webhook_routes import setup_webhook_routes
 app.include_router(setup_webhook_routes(webhook_manager, auth_manager, session_manager, api_key_manager))
 
 # API Tokens
