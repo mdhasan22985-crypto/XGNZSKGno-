@@ -692,7 +692,7 @@ from routes.history.history_routes import setup_history_routes
 app.include_router(setup_history_routes(session_manager, upload_handler=upload_handler))
 
 # Search
-from routes.search_routes import setup_search_routes
+from routes.search.search_routes import setup_search_routes
 app.include_router(setup_search_routes(config))
 
 # Presets
@@ -852,7 +852,7 @@ app.include_router(setup_codex_routes(
 ))
 app.include_router(setup_claude_routes())
 
-from routes.vault_routes import setup_vault_routes
+from routes.vault.vault_routes import setup_vault_routes
 app.include_router(setup_vault_routes())
 
 # Contacts (CardDAV)
