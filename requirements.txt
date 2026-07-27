@@ -41,6 +41,7 @@ bcrypt
 mcp
 pyotp
 qrcode[pil]
+authlib>=1.3.0,<2
 croniter
 pytest
 pytest-asyncio
